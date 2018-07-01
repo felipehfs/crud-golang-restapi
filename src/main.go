@@ -24,6 +24,9 @@ func main() {
 
 	r.HandleFunc("/customers/", customerCtrl.Create).Methods("POST")
 	r.HandleFunc("/customers/", customerCtrl.Read).Methods("GET")
+	r.HandleFunc("/customers/{id}", customerCtrl.Search).Methods("GET")
+	r.HandleFunc("/customers/{id}", customerCtrl.Update).Methods("PUT")
+	r.HandleFunc("/customers/{id}", customerCtrl.Delete).Methods("DELETE")
 
 	log.Fatal(http.ListenAndServe(":8080", handlers.CORS(
 		handlers.AllowedHeaders([]string{"Content-Type", "Authorization", "X-Requested-With"}),
