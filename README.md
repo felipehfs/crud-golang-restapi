@@ -5,6 +5,8 @@ A simple rest api with golang, the **cors is enabled**.
 
 ## Routes
 
+
+| Method  |					Routes				 | 	 	Description		   |
 |---------|--------------------------------------|-------------------------|
 | GET     | http://localhost:8080/customers/     | Retrieves all customers |
 | PUT     | http://localhost:8080/customers/{id} | updates the customer    |
